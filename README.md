@@ -21,17 +21,17 @@ This repository centralizes the ESLint configuration used for Cordova's developm
 ```yml
 # In .eslintrc.yml
 root: true
+
 extends: cordova
-```
 
-```yml
-# In spec/.eslintrc.yml
-extends: cordova/node-tests
-```
+overrides:
 
-```yml
-# In cordova-js-src/.eslintrc.yml
-extends: cordova/browser
+- files: [spec/**/*.js]
+  extends: cordova/node-tests
+
+- files: [cordova-js-src/**/*.js]
+  extends: cordova/browser
+
 ```
 
 ## Reference
