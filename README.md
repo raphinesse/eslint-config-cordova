@@ -1,11 +1,11 @@
-# eslint-config-cordova
+# @cordova/eslint-config
 This repository centralizes the ESLint configuration used for Cordova's development.
 
 ## Installation
 
 `eslint-config-cordova` comes with all plugins configs and even `eslint` itself. So all you need to do to get started is:
 
-    npm i -D eslint-config-cordova
+    npm i -D @cordova/eslint-config
 
 
 ## Usage
@@ -21,31 +21,31 @@ This repository centralizes the ESLint configuration used for Cordova's developm
 ```yml
 # In .eslintrc.yml
 root: true
-extends: cordova
+extends: '@cordova/eslint-config/node'
 ```
 
 ```yml
 # In spec/.eslintrc.yml
-extends: cordova/node-tests
+extends: '@cordova/eslint-config/node-tests'
 ```
 
 ```yml
 # In cordova-js-src/.eslintrc.yml
-extends: cordova/browser
+extends: '@cordova/eslint-config/browser'
 ```
 
 ## Reference
 
 This package exposes the following shareable ESLint configurations:
 
-### `cordova/node` (or simply `cordova`)
+### `@cordova/eslint-config/node` (or simply `@cordova`)
 For linting scripts intended to be run with Node.js.
 
-### `cordova/node-tests`
+### `@cordova/eslint-config/node-tests`
 For linting Jasmine tests of Cordova's Node.js scripts.
 
-### `cordova/browser`
+### `@cordova/eslint-config/browser`
 For linting cordova-style CommonJS modules intended to be run in the browser (before they are bundled).
 
-### `cordova/browser-tests`
+### `@cordova/eslint-config/browser-tests`
 For linting Jasmine tests of Cordova's browser code.
